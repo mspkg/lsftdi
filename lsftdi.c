@@ -16,11 +16,9 @@ static void usage(void)
     exit(1);
 }
 
-int main(void)
+int main(int argc, char **argv)
 {
-    int ret, ch = 0, i;
-    int argc;
-    char **argv;
+    int ret, ch = 0, i = 0;
     struct ftdi_context *ftdi;
     struct ftdi_device_list *devlist, *curdev;
     char manufacturer[128], description[128];
