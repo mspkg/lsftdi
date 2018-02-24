@@ -1,9 +1,12 @@
+# lsftdi Makefile
+
 CC ?= gcc
+CFLAGS ?= -g -O2 -Wall
 PREFIX ?= /usr
 MANDIR ?=${PREFIX}/share/man
 
 all:
-	${CC} lsftdi.c -lftdi1 -lusb-1.0 -o lsftdi
+	${CC} ${CFLAGS} lsftdi.c -lftdi1 -lusb-1.0 -o lsftdi
 
 install:
 	test -d ${DESTDIR}${PREFIX}/sbin || mkdir -p ${DESTDIR}${PREFIX}/sbin
