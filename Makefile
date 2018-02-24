@@ -16,3 +16,4 @@ install:
 
 clean:
 	rm lsftdi
+	rm -rf lsftdi.dSYM/
